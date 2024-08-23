@@ -801,7 +801,7 @@ input[type="submit"]:hover {
 }
 
 .section_three h2 {
-    color: #99ccff;
+    color: white;
     font-size: 40px;
     padding: 10px 10px 35px 0px;
 }
@@ -838,9 +838,33 @@ input[type="submit"]:hover {
     border: 2px solid white;
 }
 
+#edu-box1::before {
+    background-color: #9cb3ff;
+}
+
+#edu-box1 h3 {
+    color: #9cb3ff;
+}
+
+#edu-box2::before {
+    background-color: #a32645;
+}
+
+#edu-box2 h3 {
+    color: #a32645;
+}
+
+#edu-box3::before {
+    background-color: blue;
+}
+
+#edu-box3 h3 {
+    color: blue;
+}
+
 .education_box h4 {
     position: relative;
-    color: #99ccff;
+    color: white;
 }
 
 .education_box h3 {
@@ -866,7 +890,7 @@ input[type="submit"]:hover {
 }
 
 .section_four h2 {
-    color: #ff4d4d;
+    color: white;
     font-size: 40px;
     padding: 10px 10px 35px 0px;
 }
@@ -903,9 +927,73 @@ input[type="submit"]:hover {
     border: 2px solid white;
 }
 
+#exp-box1::before {
+    background-color: #03c8ff;
+}
+
+#exp-box1 h3 {
+    color: #03c8ff;
+}
+
+#exp-box2::before {
+    background-color: #9a0ddb;
+}
+
+#exp-box2 h3 {
+    color: #9a0ddb;
+}
+
+#exp-box3::before {
+    background-color: #0051ff;
+}
+
+#exp-box3 h3 {
+    color: #0051ff;
+}
+
+#exp-box4::before {
+    background-color: #329c71;
+}
+
+#exp-box4 h3 {
+    color: #329c71;
+}
+
+#exp-box5::before {
+    background-color: #9cb3ff;
+}
+
+#exp-box5 h3 {
+    color: #9cb3ff;
+}
+
+#exp-box6::before {
+    background-color: #04db85;
+}
+
+#exp-box6 h3 {
+    color: #04db85;
+}
+
+#exp-box7::before {
+    background-color: #93b5a7;
+}
+
+#exp-box7 h3 {
+    color: #93b5a7;
+}
+
+#exp-box8::before {
+    background-color: #a8dcf7;
+}
+
+#exp-box8 h3 {
+    color: #a8dcf7;
+}
+
 .experience_box h4 {
     position: relative;
-    color: #ff4d4d;
+    color: white;
 }
 
 .experience_box h3 {
@@ -931,7 +1019,7 @@ input[type="submit"]:hover {
 }
 
 .section_five h2 {
-    color: #00e673;
+    color: white;
     font-size: 40px;
     padding: 10px 10px 35px 0px;
 }
@@ -946,7 +1034,7 @@ input[type="submit"]:hover {
 
 .row {
     background: #2d343f;
-    height: 550px;
+    height: 750px;
     border-radius: 28px;
     border: 1px solid white;
     padding: 20px;
@@ -997,7 +1085,7 @@ input[type="submit"]:hover {
 }
 
 .row h4{
-    color: #00e673;
+    color: white;
     font-size: 27px;
     margin-bottom: 10px;
     line-height: 1.4;
