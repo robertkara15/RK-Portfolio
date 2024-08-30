@@ -820,13 +820,12 @@ input[type="submit"]:hover {
     position: relative;
     padding: 20px;
     border: 1px solid #eaeaea;
-    cursor: pointer;
     transition: all 0.4s;
     margin-bottom: 20px;
 }
 
 .education_box:hover {
-    box-shadow: 0px 3px 12px 0px #ccc;
+    box-shadow: 0px 0px 20px 0px #ccc;
     border: 1px solid transparent;
 }
 
@@ -909,13 +908,12 @@ input[type="submit"]:hover {
     position: relative;
     padding: 20px;
     border: 1px solid #eaeaea;
-    cursor: pointer;
     transition: all 0.4s;
     margin-bottom: 20px;
 }
 
 .experience_box:hover {
-    box-shadow: 0px 3px 12px 0px #ccc;
+    box-shadow: 0px 0px 20px 0px #ccc;
     border: 1px solid transparent;
 }
 
@@ -1098,7 +1096,6 @@ input[type="submit"]:hover {
 .row:hover {
     box-shadow: 0px 3px 12px 0px #ccc;
     border: 1px solid transparent;
-    cursor: pointer;
 }
 
 .section_six {
