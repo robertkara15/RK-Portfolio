@@ -1,0 +1,174 @@
+{
+  "defaultAlbum": "home",
+  "albums": [
+    {
+      "id": "home",
+      "title": "Featured Photos",
+      "photos": [
+        {
+          "src": "images/photography/home/Picture00001.JPG",
+          "name": "Picture00001",
+          "caption": "Picture00001"
+        },
+        {
+          "src": "images/photography/home/Picture00002.JPG",
+          "name": "Picture00002",
+          "caption": "Picture00002"
+        },
+        {
+          "src": "images/photography/home/Picture00003.JPG",
+          "name": "Picture00003",
+          "caption": "Picture00003"
+        },
+        {
+          "src": "images/photography/home/Picture00004.JPG",
+          "name": "Picture00004",
+          "caption": "Picture00004"
+        },
+        {
+          "src": "images/photography/home/Picture00005.JPG",
+          "name": "Picture00005",
+          "caption": "Picture00005"
+        },
+        {
+          "src": "images/photography/home/Picture00006.JPG",
+          "name": "Picture00006",
+          "caption": "Picture00006"
+        },
+        {
+          "src": "images/photography/home/Picture00007.JPG",
+          "name": "Picture00007",
+          "caption": "Picture00007"
+        },
+        {
+          "src": "images/photography/home/Picture00008.JPG",
+          "name": "Picture00008",
+          "caption": "Picture00008"
+        },
+        {
+          "src": "images/photography/home/Picture00009.JPG",
+          "name": "Picture00009",
+          "caption": "Picture00009"
+        },
+        {
+          "src": "images/photography/home/Picture00010.jpg",
+          "name": "Picture00010",
+          "caption": "Picture00010"
+        }
+      ]
+    },
+    {
+      "id": "album1",
+      "title": "Album 1",
+      "photos": [
+        {
+          "src": "images/photography/album1/IMG_0846.JPG",
+          "name": "IMG_0846",
+          "caption": "Img 0846"
+        },
+        {
+          "src": "images/photography/album1/IMG_1186.JPG",
+          "name": "IMG_1186",
+          "caption": "Img 1186"
+        },
+        {
+          "src": "images/photography/album1/IMG_2542.JPG",
+          "name": "IMG_2542",
+          "caption": "Img 2542"
+        },
+        {
+          "src": "images/photography/album1/IMG_4403.JPG",
+          "name": "IMG_4403",
+          "caption": "Img 4403"
+        },
+        {
+          "src": "images/photography/album1/IMG_4466.JPG",
+          "name": "IMG_4466",
+          "caption": "Img 4466"
+        },
+        {
+          "src": "images/photography/album1/IMG_4468.JPG",
+          "name": "IMG_4468",
+          "caption": "Img 4468"
+        },
+        {
+          "src": "images/photography/album1/IMG_4476.JPG",
+          "name": "IMG_4476",
+          "caption": "Img 4476"
+        },
+        {
+          "src": "images/photography/album1/IMG_4480.JPG",
+          "name": "IMG_4480",
+          "caption": "Img 4480"
+        },
+        {
+          "src": "images/photography/album1/IMG_4523.JPG",
+          "name": "IMG_4523",
+          "caption": "Img 4523"
+        },
+        {
+          "src": "images/photography/album1/IMG_4526.JPG",
+          "name": "IMG_4526",
+          "caption": "Img 4526"
+        },
+        {
+          "src": "images/photography/album1/IMG_4550.JPG",
+          "name": "IMG_4550",
+          "caption": "Img 4550"
+        },
+        {
+          "src": "images/photography/album1/IMG_4561.JPG",
+          "name": "IMG_4561",
+          "caption": "Img 4561"
+        },
+        {
+          "src": "images/photography/album1/IMG_5413.JPG",
+          "name": "IMG_5413",
+          "caption": "Img 5413"
+        },
+        {
+          "src": "images/photography/album1/IMG_5560.JPG",
+          "name": "IMG_5560",
+          "caption": "Img 5560"
+        },
+        {
+          "src": "images/photography/album1/IMG_9505.JPG",
+          "name": "IMG_9505",
+          "caption": "Img 9505"
+        }
+      ]
+    },
+    {
+      "id": "album2",
+      "title": "Album 2",
+      "photos": [
+        {
+          "src": "images/photography/album2/photo-01.svg",
+          "name": "photo-01",
+          "caption": "Photo 01"
+        },
+        {
+          "src": "images/photography/album2/photo-02.svg",
+          "name": "photo-02",
+          "caption": "Photo 02"
+        },
+        {
+          "src": "images/photography/album2/photo-03.svg",
+          "name": "photo-03",
+          "caption": "Photo 03"
+        }
+      ]
+    },
+    {
+      "id": "album3",
+      "title": "Album 3",
+      "photos": [
+        {
+          "src": "images/photography/album3/photo-01.svg",
+          "name": "photo-01",
+          "caption": "Photo 01"
+        }
+      ]
+    }
+  ]
+}

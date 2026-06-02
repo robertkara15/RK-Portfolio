@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#2a3342"/>
+  <rect x="40" y="40" width="720" height="520" fill="none" stroke="#5a6a82" stroke-width="2" stroke-dasharray="12 8"/>
+  <text x="400" y="290" fill="#99ccff" font-family="sans-serif" font-size="28" text-anchor="middle">Photo 6</text>
+  <text x="400" y="330" fill="#c8d4e8" font-family="sans-serif" font-size="16" text-anchor="middle">Replace images/photography/photo-06.jpg</text>
+</svg>

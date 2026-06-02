@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://kit.fontawesome.com/07ad5582ac.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stick+No+Bills">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/home.css">
+        <title>Photography | Robert Kara</title>
+        <link rel="icon" href="images/RK.jpg">
+    </head>
+
+    <body data-page="photography">
+        <section class="wrapper">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </section>
+        <header id="site-header"></header>
+
+        <section class="main">
+            <section class="section_photography">
+                <div class="page_intro_block">
+                    <h2>Photography</h2>
+                    <p class="photography_intro">
+                        Photography reminds me to slow down and notice more. Here's a small slice of what I've captured over the years, each album a different look through my lens.
+                    </p>
+
+                    <nav class="photography_album_nav" id="photography-album-nav" aria-label="Photo albums">
+                        <button type="button" class="photography_random_button" id="photography-random-button" disabled>
+                            <i class="fa-solid fa-shuffle" aria-hidden="true"></i>
+                            Random photo
+                        </button>
+                    </nav>
+                </div>
+
+                <h3 class="photography_album_heading" id="photography-album-title">Featured Photos</h3>
+                <p class="photography_album_subtitle" id="photography-album-subtitle">Some of my personal favourites.</p>
+
+                <p class="photography_empty" id="photography-empty" hidden></p>
+
+                <div class="photography_grid" id="photography-grid"></div>
+            </section>
+        </section>
+
+        <div class="photo_lightbox" id="photo-lightbox" hidden aria-hidden="true">
+            <button type="button" class="photo_lightbox_close" id="photo-lightbox-close" aria-label="Close fullscreen view">&times;</button>
+            <button type="button" class="photo_lightbox_nav photo_lightbox_prev" id="photo-lightbox-prev" aria-label="Previous photo">&#8249;</button>
+            <button type="button" class="photo_lightbox_nav photo_lightbox_next" id="photo-lightbox-next" aria-label="Next photo">&#8250;</button>
+            <figure class="photo_lightbox_figure">
+                <img class="photo_lightbox_img" id="photo-lightbox-img" src="" alt="">
+                <figcaption class="photo_lightbox_caption" id="photo-lightbox-caption"></figcaption>
+            </figure>
+        </div>
+
+        <footer>© Robert Karapetian 2026</footer>
+        <script src="js/nav.js"></script>
+        <script src="js/logo-twinkle.js"></script>
+        <script src="js/photography.js"></script>
+    </body>
+</html>
