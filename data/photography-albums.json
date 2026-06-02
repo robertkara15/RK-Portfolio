@@ -4,141 +4,166 @@
     {
       "id": "home",
       "title": "Featured Photos",
-      "subtitle": "Some of my personal favourites",
       "photos": [
         {
           "src": "images/photography/home/Picture00001.JPG",
           "name": "Picture00001",
-          "caption": "Picture00001"
+          "caption": "Picture00001",
+          "thumb": "images/photography/home/thumbs/Picture00001.jpg"
         },
         {
           "src": "images/photography/home/Picture00002.JPG",
           "name": "Picture00002",
-          "caption": "Picture00002"
+          "caption": "Picture00002",
+          "thumb": "images/photography/home/thumbs/Picture00002.jpg"
         },
         {
           "src": "images/photography/home/Picture00003.JPG",
           "name": "Picture00003",
-          "caption": "Picture00003"
+          "caption": "Picture00003",
+          "thumb": "images/photography/home/thumbs/Picture00003.jpg"
         },
         {
           "src": "images/photography/home/Picture00004.JPG",
           "name": "Picture00004",
-          "caption": "Picture00004"
+          "caption": "Picture00004",
+          "thumb": "images/photography/home/thumbs/Picture00004.jpg"
         },
         {
           "src": "images/photography/home/Picture00005.JPG",
           "name": "Picture00005",
-          "caption": "Picture00005"
+          "caption": "Picture00005",
+          "thumb": "images/photography/home/thumbs/Picture00005.jpg"
         },
         {
           "src": "images/photography/home/Picture00006.JPG",
           "name": "Picture00006",
-          "caption": "Picture00006"
+          "caption": "Picture00006",
+          "thumb": "images/photography/home/thumbs/Picture00006.jpg"
         },
         {
           "src": "images/photography/home/Picture00007.JPG",
           "name": "Picture00007",
-          "caption": "Picture00007"
+          "caption": "Picture00007",
+          "thumb": "images/photography/home/thumbs/Picture00007.jpg"
         },
         {
           "src": "images/photography/home/Picture00008.JPG",
           "name": "Picture00008",
-          "caption": "Picture00008"
+          "caption": "Picture00008",
+          "thumb": "images/photography/home/thumbs/Picture00008.jpg"
         },
         {
           "src": "images/photography/home/Picture00009.JPG",
           "name": "Picture00009",
-          "caption": "Picture00009"
+          "caption": "Picture00009",
+          "thumb": "images/photography/home/thumbs/Picture00009.jpg"
         },
         {
           "src": "images/photography/home/Picture00010.jpg",
           "name": "Picture00010",
-          "caption": "Picture00010"
+          "caption": "Picture00010",
+          "thumb": "images/photography/home/thumbs/Picture00010.jpg"
         }
-      ]
+      ],
+      "subtitle": "Some of my personal favourites"
     },
     {
       "id": "album1",
       "title": "Haze",
-      "subtitle": "A glimpse into the foggy and mysterious",
       "photos": [
         {
           "src": "images/photography/album1/IMG_0846.JPG",
           "name": "IMG_0846",
-          "caption": "Img 0846"
+          "caption": "Img 0846",
+          "thumb": "images/photography/album1/thumbs/IMG_0846.jpg"
         },
         {
           "src": "images/photography/album1/IMG_1186.JPG",
           "name": "IMG_1186",
-          "caption": "Img 1186"
+          "caption": "Img 1186",
+          "thumb": "images/photography/album1/thumbs/IMG_1186.jpg"
         },
         {
           "src": "images/photography/album1/IMG_2542.JPG",
           "name": "IMG_2542",
-          "caption": "Img 2542"
+          "caption": "Img 2542",
+          "thumb": "images/photography/album1/thumbs/IMG_2542.jpg"
         },
         {
           "src": "images/photography/album1/IMG_4403.JPG",
           "name": "IMG_4403",
-          "caption": "Img 4403"
+          "caption": "Img 4403",
+          "thumb": "images/photography/album1/thumbs/IMG_4403.jpg"
         },
         {
           "src": "images/photography/album1/IMG_4466.JPG",
           "name": "IMG_4466",
-          "caption": "Img 4466"
+          "caption": "Img 4466",
+          "thumb": "images/photography/album1/thumbs/IMG_4466.jpg"
         },
         {
           "src": "images/photography/album1/IMG_4468.JPG",
           "name": "IMG_4468",
-          "caption": "Img 4468"
+          "caption": "Img 4468",
+          "thumb": "images/photography/album1/thumbs/IMG_4468.jpg"
         },
         {
           "src": "images/photography/album1/IMG_4476.JPG",
           "name": "IMG_4476",
-          "caption": "Img 4476"
+          "caption": "Img 4476",
+          "thumb": "images/photography/album1/thumbs/IMG_4476.jpg"
         },
         {
           "src": "images/photography/album1/IMG_4480.JPG",
           "name": "IMG_4480",
-          "caption": "Img 4480"
+          "caption": "Img 4480",
+          "thumb": "images/photography/album1/thumbs/IMG_4480.jpg"
         },
         {
           "src": "images/photography/album1/IMG_4523.JPG",
           "name": "IMG_4523",
-          "caption": "Img 4523"
+          "caption": "Img 4523",
+          "thumb": "images/photography/album1/thumbs/IMG_4523.jpg"
         },
         {
           "src": "images/photography/album1/IMG_4526.JPG",
           "name": "IMG_4526",
-          "caption": "Img 4526"
+          "caption": "Img 4526",
+          "thumb": "images/photography/album1/thumbs/IMG_4526.jpg"
         },
         {
           "src": "images/photography/album1/IMG_4550.JPG",
           "name": "IMG_4550",
-          "caption": "Img 4550"
+          "caption": "Img 4550",
+          "thumb": "images/photography/album1/thumbs/IMG_4550.jpg"
         },
         {
           "src": "images/photography/album1/IMG_4561.JPG",
           "name": "IMG_4561",
-          "caption": "Img 4561"
+          "caption": "Img 4561",
+          "thumb": "images/photography/album1/thumbs/IMG_4561.jpg"
         },
         {
           "src": "images/photography/album1/IMG_5413.JPG",
           "name": "IMG_5413",
-          "caption": "Img 5413"
+          "caption": "Img 5413",
+          "thumb": "images/photography/album1/thumbs/IMG_5413.jpg"
         },
         {
           "src": "images/photography/album1/IMG_5560.JPG",
           "name": "IMG_5560",
-          "caption": "Img 5560"
+          "caption": "Img 5560",
+          "thumb": "images/photography/album1/thumbs/IMG_5560.jpg"
         },
         {
           "src": "images/photography/album1/IMG_9505.JPG",
           "name": "IMG_9505",
-          "caption": "Img 9505"
+          "caption": "Img 9505",
+          "thumb": "images/photography/album1/thumbs/IMG_9505.jpg"
         }
-      ]
+      ],
+      "subtitle": "A glimpse into the foggy and mysterious"
     }
   ]
 }

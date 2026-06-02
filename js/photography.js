@@ -64,7 +64,7 @@
     function openRandomPhoto() {
         if (!allPhotos.length) return;
         const index = Math.floor(Math.random() * allPhotos.length);
-        window.PhotoLightbox.open(index, allPhotos);
+        window.PhotoLightbox.open(0, [allPhotos[index]]);
     }
 
     function renderGrid(album) {
@@ -103,9 +103,15 @@
             button.setAttribute("aria-label", "View " + (photo.caption || photo.name) + " fullscreen");
 
             const img = document.createElement("img");
-            img.src = photo.src;
+            img.src = photo.thumb || photo.src;
             img.alt = photo.caption || photo.name;
             img.loading = "lazy";
+            img.decoding = "async";
+            img.addEventListener("error", function () {
+                if (photo.thumb && img.src.indexOf(photo.thumb) !== -1) {
+                    img.src = photo.src;
+                }
+            });
 
             button.appendChild(img);
             figure.appendChild(button);

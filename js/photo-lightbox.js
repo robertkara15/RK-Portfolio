@@ -40,6 +40,7 @@ window.PhotoLightbox = (function () {
 
         lightboxIndex = index;
         const photo = lightboxPhotos[index];
+        lightboxImgEl.decoding = "async";
         lightboxImgEl.src = photo.src;
         lightboxImgEl.alt = photo.caption || photo.name || "";
         lightboxCaptionEl.textContent = photo.caption || photo.name || "";
