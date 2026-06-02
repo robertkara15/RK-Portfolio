@@ -85,8 +85,8 @@
         emptyEl.hidden = true;
         if (titleEl) titleEl.textContent = album.title;
         if (subtitleEl) {
-            if (album.id === "home") {
-                subtitleEl.textContent = "Some of my personal favourites";
+            if (album.subtitle) {
+                subtitleEl.textContent = album.subtitle;
                 subtitleEl.hidden = false;
             } else {
                 subtitleEl.hidden = true;

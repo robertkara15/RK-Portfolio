@@ -4,6 +4,7 @@
     {
       "id": "home",
       "title": "Featured Photos",
+      "subtitle": "Some of my personal favourites",
       "photos": [
         {
           "src": "images/photography/home/Picture00001.JPG",
@@ -59,7 +60,8 @@
     },
     {
       "id": "album1",
-      "title": "Album 1",
+      "title": "Haze",
+      "subtitle": "A glimpse into the foggy and mysterious",
       "photos": [
         {
           "src": "images/photography/album1/IMG_0846.JPG",
@@ -135,38 +137,6 @@
           "src": "images/photography/album1/IMG_9505.JPG",
           "name": "IMG_9505",
           "caption": "Img 9505"
-        }
-      ]
-    },
-    {
-      "id": "album2",
-      "title": "Album 2",
-      "photos": [
-        {
-          "src": "images/photography/album2/photo-01.svg",
-          "name": "photo-01",
-          "caption": "Photo 01"
-        },
-        {
-          "src": "images/photography/album2/photo-02.svg",
-          "name": "photo-02",
-          "caption": "Photo 02"
-        },
-        {
-          "src": "images/photography/album2/photo-03.svg",
-          "name": "photo-03",
-          "caption": "Photo 03"
-        }
-      ]
-    },
-    {
-      "id": "album3",
-      "title": "Album 3",
-      "photos": [
-        {
-          "src": "images/photography/album3/photo-01.svg",
-          "name": "photo-01",
-          "caption": "Photo 01"
         }
       ]
     }

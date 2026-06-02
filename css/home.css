@@ -1,7 +1,10 @@
 @import url(reset.css);
 
 html {
+    color-scheme: dark;
+    background-color: #090a0f;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background-attachment: fixed;
     overflow-x: hidden;
     scrollbar-gutter: stable;
 }
@@ -10,8 +13,11 @@ body {
     width: 100%;
     margin: 0;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
+    background-color: #090a0f;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background-attachment: fixed;
     font-family: Roboto Mono;
 }
 
@@ -1178,6 +1184,10 @@ input[type="submit"]:hover {
 .page_intro_block .experience_timeline_intro {
     margin: 0.35rem 0 0;
     max-width: 52rem;
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .education_content {
@@ -1752,24 +1762,18 @@ input[type="submit"]:hover {
 
 .section_projects {
     padding-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     padding-left: 40px;
     padding-right: 40px;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
 }
 
 .section_projects h2 {
     color: white;
     font-size: 40px;
-    margin: 0 0 0.75rem;
-}
-
-.projects_intro {
-    font-family: 'Open Sans', sans-serif;
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 17px;
-    line-height: 1.55;
-    max-width: 52rem;
-    margin: 0;
+    padding: 10px 10px 0 0;
 }
 
 .projects_grid {
@@ -1964,37 +1968,25 @@ input[type="submit"]:hover {
 
 .section_photography {
     padding-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     padding-left: 40px;
     padding-right: 40px;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
 }
 
 .section_photography h2 {
     color: white;
     font-size: 40px;
-    padding: 10px 10px 20px 0;
-}
-
-.photography_intro {
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-    font-size: 17px;
-    line-height: 1.5;
-    max-width: 720px;
-    margin-bottom: 1rem;
-}
-
-.photography_intro code {
-    color: #99ccff;
-    font-family: Roboto Mono, monospace;
-    font-size: 15px;
+    padding: 10px 10px 0 0;
 }
 
 .photography_album_nav {
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem 1rem;
-    margin-bottom: 0;
+    margin: 0 0 1.25rem;
     align-items: center;
 }
 
@@ -2813,7 +2805,7 @@ footer {
     }
 
     .home_contact {
-        padding-top: 0;
+        padding-top: 0.85rem;
     }
 
     .contact_spin_button {
@@ -2824,13 +2816,13 @@ footer {
     }
 
     .home_hero {
-        margin-bottom: 0.35rem;
+        margin-bottom: 1.35rem;
         margin-top: 0.15rem;
     }
 
     .home_hero h1 {
         font-size: 30px;
-        padding: 0 0 0.45rem;
+        padding: 0 0 1.15rem;
         line-height: 1.15;
     }
 
@@ -2845,7 +2837,7 @@ footer {
     }
 
     .home_hero.page_intro_block {
-        margin-bottom: 0.35rem;
+        margin-bottom: 1.35rem;
         padding-bottom: 0;
         border-bottom: none;
     }
@@ -2877,7 +2869,7 @@ footer {
     }
 
     .home_skills_ticker {
-        margin-bottom: 0.7rem;
+        margin-bottom: 1.35rem;
     }
 
     .home_skills_ticker_row {
@@ -2887,11 +2879,6 @@ footer {
 
     .home_skills_sep {
         padding: 0 0.4rem;
-    }
-
-    .section_projects {
-        padding-left: 20px;
-        padding-right: 20px;
     }
 
     .projects_grid {
@@ -2910,35 +2897,9 @@ footer {
         max-height: 280px;
     }
 
-    .section_photography {
-        padding-top: 12px;
-        padding-bottom: 28px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .section_photography .page_intro_block {
-        margin-bottom: 0.6rem;
-        padding-bottom: 0.6rem;
-    }
-
-    .section_photography h2 {
-        font-size: 22px;
-        padding: 0 0 0.35rem;
-    }
-
-    .section_photography .photography_intro {
-        font-size: 12px;
-        line-height: 1.4;
-        margin-bottom: 0.5rem;
-    }
-
-    .section_photography .photography_intro code {
-        font-size: 11px;
-    }
-
     .section_photography .photography_album_nav {
         gap: 0.35rem 0.45rem;
+        margin-bottom: 1rem;
     }
 
     .section_photography .photography_album_link {
@@ -2990,13 +2951,17 @@ footer {
     }
 
     .section_three,
-    .section_four {
+    .section_four,
+    .section_projects,
+    .section_photography {
         padding-left: 1rem;
         padding-right: 1rem;
     }
 
     .section_education .page_intro_block,
-    .section_experience .page_intro_block {
+    .section_experience .page_intro_block,
+    .section_projects .page_intro_block,
+    .section_photography .page_intro_block {
         max-width: 100%;
     }
 

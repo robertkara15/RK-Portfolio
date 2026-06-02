@@ -117,8 +117,6 @@ html.a11y-readable-font .home_featured_title,
 html.a11y-readable-font .contact_readout_title,
 html.a11y-readable-font .contact_readout_detail,
 html.a11y-readable-font .experience_timeline_intro,
-html.a11y-readable-font .projects_intro,
-html.a11y-readable-font .photography_intro,
 html.a11y-readable-font .timeline_panel,
 html.a11y-readable-font .project_details,
 html.a11y-readable-font .heading_bar a:not(.heading_logo_link) {
@@ -151,8 +149,6 @@ html.a11y-high-contrast .home_intro,
 html.a11y-high-contrast .home_featured_detail,
 html.a11y-high-contrast .contact_readout_detail,
 html.a11y-high-contrast .experience_timeline_intro,
-html.a11y-high-contrast .projects_intro,
-html.a11y-high-contrast .photography_intro,
 html.a11y-high-contrast .timeline_role,
 html.a11y-high-contrast footer {
     color: #ffffff;

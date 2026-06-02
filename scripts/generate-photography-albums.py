@@ -12,11 +12,22 @@ ROOT = Path(__file__).resolve().parent.parent
 PHOTO_ROOT = ROOT / "images" / "photography"
 OUTPUT = ROOT / "data" / "photography-albums.json"
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".avif"}
+SKIP_ALBUMS = {"album2", "album3"}
+
+ALBUM_TITLES = {
+    "home": "Featured Photos",
+    "album1": "Haze",
+}
+
+ALBUM_SUBTITLES = {
+    "home": "Some of my personal favourites",
+    "album1": "A glimpse into the foggy and mysterious",
+}
 
 
 def album_title(folder_id: str) -> str:
-    if folder_id == "home":
-        return "Featured Photos"
+    if folder_id in ALBUM_TITLES:
+        return ALBUM_TITLES[folder_id]
     match = re.match(r"^album(\d+)$", folder_id, re.IGNORECASE)
     if match:
         return f"Album {match.group(1)}"
@@ -30,7 +41,7 @@ def main() -> int:
 
     albums = []
     for folder in sorted(PHOTO_ROOT.iterdir()):
-        if not folder.is_dir() or folder.name.startswith("."):
+        if not folder.is_dir() or folder.name.startswith(".") or folder.name in SKIP_ALBUMS:
             continue
 
         photos = []
@@ -46,7 +57,10 @@ def main() -> int:
                 }
             )
 
-        albums.append({"id": folder.name, "title": album_title(folder.name), "photos": photos})
+        entry = {"id": folder.name, "title": album_title(folder.name), "photos": photos}
+        if folder.name in ALBUM_SUBTITLES:
+            entry["subtitle"] = ALBUM_SUBTITLES[folder.name]
+        albums.append(entry)
 
     albums.sort(key=lambda item: (0 if item["id"] == "home" else 1, item["id"].lower()))
 
