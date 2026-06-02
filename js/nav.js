@@ -34,7 +34,7 @@
     const logoLink =
         '<a href="index.html" class="heading_logo_link' +
         logoActive +
-        '"><img src="images/RK.jpg" width="70" height="70" alt="Robert Karapetian home"/></a>';
+        '"><img src="images/RK.png" width="70" height="70" alt="Robert Karapetian home"/></a>';
 
     header.innerHTML =
         '<hgroup><ul class="heading_bar">' +
