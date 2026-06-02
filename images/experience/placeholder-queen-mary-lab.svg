@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+  <rect width="600" height="800" fill="#1a2233"/>
+  <rect x="40" y="40" width="520" height="720" fill="none" stroke="#9cb3ff" stroke-width="2" stroke-dasharray="12 8"/>
+  <text x="300" y="360" fill="#9cb3ff" font-family="sans-serif" font-size="22" text-anchor="middle">Queen Mary Lab</text>
+  <text x="300" y="400" fill="#c8d4e8" font-family="sans-serif" font-size="18" text-anchor="middle">4:3 · portrait</text>
+  <text x="300" y="440" fill="#8a9ab8" font-family="sans-serif" font-size="13" text-anchor="middle">images/experience/queen-mary-lab.jpg</text>
+</svg>

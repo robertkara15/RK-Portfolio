@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <script src="js/a11y-init.js"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script src="https://kit.fontawesome.com/07ad5582ac.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,19 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/home.css">
-        <title>Education | Robert Kara</title>
+        <link rel="stylesheet" href="css/a11y.css">
+        <title>Education | Robert Karapetian</title>
+        <meta name="description" content="Education history for Robert Karapetian, including a 1st class BSc in Computer Science from Queen Mary University of London.">
+        <link rel="canonical" href="https://www.robertkara.com/education.html">
+        <meta property="og:site_name" content="Robert Karapetian">
+        <meta property="og:title" content="Education | Robert Karapetian">
+        <meta property="og:description" content="Education history for Robert Karapetian, including a 1st class BSc in Computer Science from Queen Mary University of London.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.robertkara.com/education.html">
+        <meta property="og:image" content="https://www.robertkara.com/images/RK.jpg">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Education | Robert Karapetian">
+        <meta name="twitter:description" content="Education history for Robert Karapetian, including a 1st class BSc in Computer Science from Queen Mary University of London.">
         <link rel="icon" href="images/RK.jpg">
     </head>
 
@@ -26,11 +39,11 @@
         </section>
         <header id="site-header"></header>
 
-        <section class="main">
+        <section class="main" id="main-content" tabindex="-1">
             <section class="section_three section_education">
                 <div class="page_intro_block">
                     <h2>Education</h2>
-                    <p class="experience_timeline_intro">Select an institution to view qualifications and module details.</p>
+                    <p class="experience_timeline_intro">Select an institution to view qualifications and modules.</p>
                 </div>
 
                 <div class="experience_timeline" role="list">
@@ -46,21 +59,30 @@
                             <span class="timeline_chevron" aria-hidden="true"></span>
                         </button>
                         <div class="timeline_panel" id="edu-timeline-panel-1" hidden>
-                            <p class="timeline_panel_lead">1st Class Honours achieved.</p>
-                            <p class="timeline_panel_lead">Relevant modules:</p>
-                            <ul class="timeline_module_pills" aria-label="Relevant modules">
-                                <li class="timeline_module_pill">Neural Networks and Deep Learning</li>
-                                <li class="timeline_module_pill">Digital Media and Social Networks</li>
-                                <li class="timeline_module_pill">Big Data Processing</li>
-                                <li class="timeline_module_pill">Algorithms and Data Structures</li>
-                                <li class="timeline_module_pill">Object-Oriented Programming</li>
-                                <li class="timeline_module_pill">Operating Systems</li>
-                                <li class="timeline_module_pill">Probability and Matrices</li>
-                                <li class="timeline_module_pill">Graphical User Interfaces</li>
-                                <li class="timeline_module_pill">Fundamentals of Web Technology</li>
-                                <li class="timeline_module_pill">Automata and Formal Languages</li>
-                                <li class="timeline_module_pill">Logic and Discrete Structures</li>
-                            </ul>
+                            <div class="timeline_panel_inner">
+                                <div class="timeline_panel_body">
+                                    <p class="timeline_panel_lead">1st Class Honours achieved.</p>
+                                    <p class="timeline_panel_lead">Relevant modules:</p>
+                                    <ul class="timeline_module_pills" aria-label="Relevant modules">
+                                        <li class="timeline_module_pill">Neural Networks and Deep Learning</li>
+                                        <li class="timeline_module_pill">Digital Media and Social Networks</li>
+                                        <li class="timeline_module_pill">Big Data Processing</li>
+                                        <li class="timeline_module_pill">Algorithms and Data Structures</li>
+                                        <li class="timeline_module_pill">Object-Oriented Programming</li>
+                                        <li class="timeline_module_pill">Operating Systems</li>
+                                        <li class="timeline_module_pill">Probability and Matrices</li>
+                                        <li class="timeline_module_pill">Graphical User Interfaces</li>
+                                        <li class="timeline_module_pill">Fundamentals of Web Technology</li>
+                                        <li class="timeline_module_pill">Automata and Formal Languages</li>
+                                        <li class="timeline_module_pill">Logic and Discrete Structures</li>
+                                    </ul>
+                                </div>
+                                <figure class="photo_item timeline_panel_photo" data-aspect="landscape">
+                                    <button type="button" class="photo_item_button" aria-label="View Queen Mary University of London fullscreen">
+                                        <img src="images/education/queen-mary.png" width="1200" height="900" alt="Queen Mary University of London graduation">
+                                    </button>
+                                </figure>
+                            </div>
                         </div>
                     </article>
 
@@ -75,14 +97,23 @@
                             <span class="timeline_chevron" aria-hidden="true"></span>
                         </button>
                         <div class="timeline_panel" id="edu-timeline-panel-2" hidden>
-                            <p class="timeline_panel_lead">4 A-C grades achieved.</p>
-                            <p class="timeline_panel_lead">Subjects taken:</p>
-                            <ul class="timeline_module_pills" aria-label="A Level subjects">
-                                <li class="timeline_module_pill">Computer Science</li>
-                                <li class="timeline_module_pill">Mathematics</li>
-                                <li class="timeline_module_pill">Physics</li>
-                                <li class="timeline_module_pill">Further Mathematics</li>
-                            </ul>
+                            <div class="timeline_panel_inner">
+                                <div class="timeline_panel_body">
+                                    <p class="timeline_panel_lead">4 A-C grades achieved.</p>
+                                    <p class="timeline_panel_lead">Subjects taken:</p>
+                                    <ul class="timeline_module_pills" aria-label="A Level subjects">
+                                        <li class="timeline_module_pill">Computer Science</li>
+                                        <li class="timeline_module_pill">Mathematics</li>
+                                        <li class="timeline_module_pill">Physics</li>
+                                        <li class="timeline_module_pill">Further Mathematics</li>
+                                    </ul>
+                                </div>
+                                <figure class="photo_item timeline_panel_photo" data-aspect="landscape">
+                                    <button type="button" class="photo_item_button" aria-label="View Chelsea Academy fullscreen">
+                                        <img src="images/education/chelsea-academy.png" width="1200" height="900" alt="Chelsea Academy Class of 2022">
+                                    </button>
+                                </figure>
+                            </div>
                         </div>
                     </article>
 
@@ -97,31 +128,53 @@
                             <span class="timeline_chevron" aria-hidden="true"></span>
                         </button>
                         <div class="timeline_panel" id="edu-timeline-panel-3" hidden>
-                            <p class="timeline_panel_lead">1 Level 3 FSMQ/A and 11 GCSEs achieved.</p>
-                            <p class="timeline_panel_lead">Subjects taken:</p>
-                            <ul class="timeline_module_pills" aria-label="GCSE subjects">
-                                <li class="timeline_module_pill">Additional Mathematics</li>
-                                <li class="timeline_module_pill">English Language</li>
-                                <li class="timeline_module_pill">English Literature</li>
-                                <li class="timeline_module_pill">Mathematics</li>
-                                <li class="timeline_module_pill">Further Mathematics</li>
-                                <li class="timeline_module_pill">Biology</li>
-                                <li class="timeline_module_pill">Chemistry</li>
-                                <li class="timeline_module_pill">Physics</li>
-                                <li class="timeline_module_pill">History</li>
-                                <li class="timeline_module_pill">Religious Studies</li>
-                                <li class="timeline_module_pill">Spanish</li>
-                                <li class="timeline_module_pill">Computer Science</li>
-                            </ul>
+                            <div class="timeline_panel_inner">
+                                <div class="timeline_panel_body">
+                                    <p class="timeline_panel_lead">1 Level 3 FSMQ/A and 11 GCSEs achieved.</p>
+                                    <p class="timeline_panel_lead">Subjects taken:</p>
+                                    <ul class="timeline_module_pills" aria-label="GCSE subjects">
+                                        <li class="timeline_module_pill">Additional Mathematics</li>
+                                        <li class="timeline_module_pill">English Language</li>
+                                        <li class="timeline_module_pill">English Literature</li>
+                                        <li class="timeline_module_pill">Mathematics</li>
+                                        <li class="timeline_module_pill">Further Mathematics</li>
+                                        <li class="timeline_module_pill">Biology</li>
+                                        <li class="timeline_module_pill">Chemistry</li>
+                                        <li class="timeline_module_pill">Physics</li>
+                                        <li class="timeline_module_pill">History</li>
+                                        <li class="timeline_module_pill">Religious Studies</li>
+                                        <li class="timeline_module_pill">Spanish</li>
+                                        <li class="timeline_module_pill">Computer Science</li>
+                                    </ul>
+                                </div>
+                                <figure class="photo_item timeline_panel_photo" data-aspect="landscape">
+                                    <button type="button" class="photo_item_button" aria-label="View Platanos College fullscreen">
+                                        <img src="images/education/platanos-college.png" width="1200" height="900" alt="Platanos College">
+                                    </button>
+                                </figure>
+                            </div>
                         </div>
                     </article>
                 </div>
             </section>
         </section>
 
+        <div class="photo_lightbox" id="photo-lightbox" hidden aria-hidden="true">
+            <button type="button" class="photo_lightbox_close" id="photo-lightbox-close" aria-label="Close fullscreen view">&times;</button>
+            <button type="button" class="photo_lightbox_nav photo_lightbox_prev" id="photo-lightbox-prev" aria-label="Previous photo" hidden>&#8249;</button>
+            <button type="button" class="photo_lightbox_nav photo_lightbox_next" id="photo-lightbox-next" aria-label="Next photo" hidden>&#8250;</button>
+            <figure class="photo_lightbox_figure">
+                <img class="photo_lightbox_img" id="photo-lightbox-img" src="" alt="">
+                <figcaption class="photo_lightbox_caption" id="photo-lightbox-caption"></figcaption>
+            </figure>
+        </div>
+
         <footer>© Robert Karapetian 2026</footer>
         <script src="js/nav.js"></script>
+        <script src="js/a11y.js"></script>
         <script src="js/logo-twinkle.js"></script>
+        <script src="js/photo-lightbox.js"></script>
         <script src="js/timeline.js"></script>
+        <script src="js/education.js"></script>
     </body>
 </html>

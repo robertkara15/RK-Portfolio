@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <script src="js/a11y-init.js"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script src="https://kit.fontawesome.com/07ad5582ac.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,19 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/home.css">
-        <title>Projects | Robert Kara</title>
+        <link rel="stylesheet" href="css/a11y.css">
+        <title>Projects | Robert Karapetian</title>
+        <meta name="description" content="Selected projects by Robert Karapetian, including Sortfolio and full-stack work across Python, React, and cloud technologies.">
+        <link rel="canonical" href="https://www.robertkara.com/projects.html">
+        <meta property="og:site_name" content="Robert Karapetian">
+        <meta property="og:title" content="Projects | Robert Karapetian">
+        <meta property="og:description" content="Selected projects by Robert Karapetian, including Sortfolio and full-stack work across Python, React, and cloud technologies.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.robertkara.com/projects.html">
+        <meta property="og:image" content="https://www.robertkara.com/images/RK.jpg">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Projects | Robert Karapetian">
+        <meta name="twitter:description" content="Selected projects by Robert Karapetian, including Sortfolio and full-stack work across Python, React, and cloud technologies.">
         <link rel="icon" href="images/RK.jpg">
     </head>
 
@@ -26,7 +39,7 @@
         </section>
         <header id="site-header"></header>
 
-        <section class="main">
+        <section class="main" id="main-content" tabindex="-1">
             <section class="section_projects">
                 <div class="page_intro_block">
                     <h2>Projects</h2>
@@ -175,128 +188,13 @@
                             </ul>
                         </div>
                     </article>
-
-                    <article class="project_card" style="--accent: #99ccff">
-                        <div class="project_card_media">
-                            <img src="images/blog_project.jpg" alt="Portfolio website with blog functionality">
-                        </div>
-                        <div class="project_card_body">
-                            <div class="project_card_header">
-                                <span class="project_badge project_badge--public">On GitHub</span>
-                                <a
-                                    href="https://github.com/robertkara15/RK-Portfolio-Blog-Functionality"
-                                    class="project_link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="View Portfolio Blog on GitHub"
-                                >
-                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <h3 class="project_title">Portfolio Website with Blog Functionality</h3>
-                            <div class="project_tags">
-                                <span class="project_tag">HTML</span>
-                                <span class="project_tag">CSS</span>
-                                <span class="project_tag">PHP</span>
-                                <span class="project_tag">JavaScript</span>
-                                <span class="project_tag">SQL</span>
-                            </div>
-                            <ul class="project_details">
-                                <li>Responsive full-stack site with SQL-backed login separating admin and guest blog permissions.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project_card" style="--accent: #2a6de8">
-                        <div class="project_card_media">
-                            <img src="images/bighousegame_project.jpg" alt="Big House Game">
-                        </div>
-                        <div class="project_card_body">
-                            <div class="project_card_header">
-                                <span class="project_badge project_badge--public">On GitHub</span>
-                                <a
-                                    href="https://github.com/robertkara15/Big-House-Game"
-                                    class="project_link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="View Big House Game on GitHub"
-                                >
-                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <h3 class="project_title">Big House Game</h3>
-                            <div class="project_tags">
-                                <span class="project_tag">Java</span>
-                                <span class="project_tag">Java Swing</span>
-                            </div>
-                            <ul class="project_details">
-                                <li>Text-based adventure with Java Swing GUI for room navigation and inventory management.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project_card" style="--accent: #7ef0b8">
-                        <div class="project_card_media">
-                            <img src="images/sorting_project.jpg" alt="Sorting algorithm visualiser">
-                        </div>
-                        <div class="project_card_body">
-                            <div class="project_card_header">
-                                <span class="project_badge project_badge--public">On GitHub</span>
-                                <a
-                                    href="https://github.com/robertkara15/Sorting-Algorithm-Visualiser"
-                                    class="project_link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="View Sorting Algorithm Visualiser on GitHub"
-                                >
-                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <h3 class="project_title">Sorting Algorithm Visualiser</h3>
-                            <div class="project_tags">
-                                <span class="project_tag">Python</span>
-                                <span class="project_tag">Pygame</span>
-                            </div>
-                            <ul class="project_details">
-                                <li>Visualises sorting algorithms in ascending or descending order using Pygame.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project_card" style="--accent: #1848c4">
-                        <div class="project_card_media">
-                            <img src="images/hotel_project.jpg" alt="Hotel booking system">
-                        </div>
-                        <div class="project_card_body">
-                            <div class="project_card_header">
-                                <span class="project_badge project_badge--public">On GitHub</span>
-                                <a
-                                    href="https://github.com/robertkara15/Hotel-Booking-System"
-                                    class="project_link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="View Hotel Booking System on GitHub"
-                                >
-                                    <i class="fa-brands fa-github" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <h3 class="project_title">Hotel Booking System</h3>
-                            <div class="project_tags">
-                                <span class="project_tag">Python</span>
-                                <span class="project_tag">Tkinter</span>
-                                <span class="project_tag">SQL</span>
-                            </div>
-                            <ul class="project_details">
-                                <li>Desktop booking system with Tkinter GUI and SQL database for login and reservations.</li>
-                            </ul>
-                        </div>
-                    </article>
                 </div>
             </section>
         </section>
 
         <footer>© Robert Karapetian 2026</footer>
         <script src="js/nav.js"></script>
+        <script src="js/a11y.js"></script>
         <script src="js/logo-twinkle.js"></script>
     </body>
 </html>

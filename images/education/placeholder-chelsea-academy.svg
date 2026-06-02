@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1a2233"/>
+  <rect x="40" y="40" width="720" height="520" fill="none" stroke="#a32645" stroke-width="2" stroke-dasharray="12 8"/>
+  <text x="400" y="270" fill="#e8a0b0" font-family="sans-serif" font-size="26" text-anchor="middle">Chelsea Academy</text>
+  <text x="400" y="310" fill="#c8d4e8" font-family="sans-serif" font-size="20" text-anchor="middle">Photo placeholder</text>
+  <text x="400" y="350" fill="#8a9ab8" font-family="sans-serif" font-size="14" text-anchor="middle">images/education/chelsea-academy.jpg</text>
+</svg>

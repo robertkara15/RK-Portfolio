@@ -13,6 +13,13 @@
     const excludedSpinDirs = new Set(['SW', 'NW']);
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    function isReduceMotionEnabled() {
+        return (
+            prefersReducedMotion ||
+            document.documentElement.classList.contains('a11y-reduce-motion')
+        );
+    }
+
     if (!compass || !segments.length) return;
 
     let isSpinning = false;
@@ -132,7 +139,7 @@
         const winnerIndex = pickWinnerIndex();
         setSpinning(true);
 
-        if (prefersReducedMotion) {
+        if (isReduceMotionEnabled()) {
             showRedirect(orderedSegments[winnerIndex]);
             return;
         }

@@ -1,5 +1,12 @@
 (function () {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function isReduceMotionEnabled() {
+        return (
+            prefersReducedMotion ||
+            document.documentElement.classList.contains('a11y-reduce-motion')
+        );
+    }
     const hoverDelayMs = 2000;
     const twinkleDurationMs = 1100;
 
@@ -14,7 +21,7 @@
     }
 
     function triggerTwinkle() {
-        if (twinkling || prefersReducedMotion) {
+        if (twinkling || isReduceMotionEnabled()) {
             return;
         }
 
@@ -29,7 +36,7 @@
 
     function bindLogo(link) {
         link.addEventListener('mouseenter', function () {
-            if (twinkling || prefersReducedMotion) {
+            if (twinkling || isReduceMotionEnabled()) {
                 return;
             }
             clearHoverTimer();

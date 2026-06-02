@@ -1,0 +1,267 @@
+/* Skip link */
+.skip-link {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 2000;
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #0b1020;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transform: translateY(-160%);
+    transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    outline: 3px solid #99ccff;
+    outline-offset: 2px;
+}
+
+/* Accessibility widget */
+.a11y-widget {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1200;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.a11y-widget_toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid rgba(153, 204, 255, 0.5);
+    border-radius: 999px;
+    background: rgba(14, 20, 32, 0.95);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.a11y-widget_toggle:hover {
+    border-color: #99ccff;
+    background: rgba(22, 30, 46, 0.98);
+}
+
+.a11y-widget_toggle:focus-visible {
+    outline: 3px solid #99ccff;
+    outline-offset: 2px;
+}
+
+.a11y-panel {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 0.55rem);
+    width: min(17.5rem, calc(100vw - 2rem));
+    padding: 0.85rem 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(14, 20, 32, 0.98);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+.a11y-panel_title {
+    margin: 0 0 0.65rem;
+    font-family: Roboto Mono, monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.a11y-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.a11y-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+
+.a11y-option input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #99ccff;
+}
+
+/* Large text */
+html.a11y-large-text {
+    font-size: 112.5%;
+}
+
+/* Readable font */
+html.a11y-readable-font body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+html.a11y-readable-font .home_intro,
+html.a11y-readable-font .home_featured_detail,
+html.a11y-readable-font .home_featured_title,
+html.a11y-readable-font .contact_readout_title,
+html.a11y-readable-font .contact_readout_detail,
+html.a11y-readable-font .experience_timeline_intro,
+html.a11y-readable-font .projects_intro,
+html.a11y-readable-font .photography_intro,
+html.a11y-readable-font .timeline_panel,
+html.a11y-readable-font .project_details,
+html.a11y-readable-font .heading_bar a:not(.heading_logo_link) {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Underline links */
+html.a11y-underline-links a:not(.heading_logo_link):not(.skip-link) {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+/* Enhanced focus outlines */
+:focus-visible {
+    outline: 2px solid #99ccff;
+    outline-offset: 2px;
+}
+
+html.a11y-high-contrast :focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* High contrast */
+html.a11y-high-contrast body {
+    color: #ffffff;
+}
+
+html.a11y-high-contrast .home_intro,
+html.a11y-high-contrast .home_featured_detail,
+html.a11y-high-contrast .contact_readout_detail,
+html.a11y-high-contrast .experience_timeline_intro,
+html.a11y-high-contrast .projects_intro,
+html.a11y-high-contrast .photography_intro,
+html.a11y-high-contrast .timeline_role,
+html.a11y-high-contrast footer {
+    color: #ffffff;
+}
+
+html.a11y-high-contrast .home_featured_card,
+html.a11y-high-contrast .contact_readout,
+html.a11y-high-contrast .timeline_trigger,
+html.a11y-high-contrast .project_card,
+html.a11y-high-contrast .photo_item,
+html.a11y-high-contrast .home_skills_ticker,
+html.a11y-high-contrast .a11y-panel {
+    border-color: #ffffff;
+    background: #000000;
+}
+
+html.a11y-high-contrast .home_featured_label,
+html.a11y-high-contrast .heading_bar a.nav-current:not(.heading_logo_link) {
+    color: #ffffff;
+}
+
+html.a11y-high-contrast .heading_bar a:not(.heading_logo_link) {
+    color: #ffffff;
+}
+
+html.a11y-high-contrast #stars,
+html.a11y-high-contrast #stars2,
+html.a11y-high-contrast #stars3 {
+    opacity: 0.35;
+}
+
+/* Reduce motion (manual toggle) */
+html.a11y-reduce-motion #stars,
+html.a11y-reduce-motion #stars2,
+html.a11y-reduce-motion #stars3 {
+    animation: none !important;
+}
+
+html.a11y-reduce-motion .home_skills_ticker_track {
+    animation: none !important;
+}
+
+html.a11y-reduce-motion .contact_star_ring {
+    animation: none !important;
+}
+
+html.a11y-reduce-motion .timeline_panel {
+    animation: none !important;
+}
+
+html.a11y-reduce-motion .contact_segment path,
+html.a11y-reduce-motion .contact_segment_icon,
+html.a11y-reduce-motion .contact_readout_inner,
+html.a11y-reduce-motion .home_featured_card,
+html.a11y-reduce-motion .timeline_trigger {
+    transition-duration: 0.01ms !important;
+}
+
+html.a11y-reduce-motion body.logo-twinkle .wrapper::before,
+html.a11y-reduce-motion body.logo-twinkle .heading_logo_link img {
+    animation: none !important;
+}
+
+html.a11y-reduce-motion .home_skills_ticker_viewport {
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+html.a11y-reduce-motion .home_skills_ticker_track {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+}
+
+html.a11y-reduce-motion .home_skills_ticker_row[aria-hidden='true'] {
+    display: none;
+}
+
+html.a11y-reduce-motion .home_skills_ticker_row {
+    flex-wrap: wrap;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .a11y-widget {
+        right: 0.65rem;
+        bottom: 0.65rem;
+    }
+
+    .a11y-widget_toggle span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .a11y-widget_toggle {
+        padding: 0.6rem;
+        border-radius: 50%;
+    }
+}

@@ -5,19 +5,10 @@
     const gridEl = document.getElementById("photography-grid");
     const emptyEl = document.getElementById("photography-empty");
     const randomButtonEl = document.getElementById("photography-random-button");
-    const lightboxEl = document.getElementById("photo-lightbox");
-    const lightboxImgEl = document.getElementById("photo-lightbox-img");
-    const lightboxCaptionEl = document.getElementById("photo-lightbox-caption");
-    const lightboxCloseEl = document.getElementById("photo-lightbox-close");
-    const lightboxPrevEl = document.getElementById("photo-lightbox-prev");
-    const lightboxNextEl = document.getElementById("photo-lightbox-next");
-
     if (!navEl || !gridEl) return;
 
     let currentPhotos = [];
     let allPhotos = [];
-    let lightboxPhotos = [];
-    let lightboxIndex = -1;
 
     function getAlbumIdFromUrl() {
         const params = new URLSearchParams(window.location.search);
@@ -70,86 +61,10 @@
         });
     }
 
-    function openLightbox(index, photoSet) {
-        lightboxPhotos = photoSet || currentPhotos;
-        if (!lightboxEl || !lightboxPhotos.length || index < 0 || index >= lightboxPhotos.length) {
-            return;
-        }
-
-        lightboxIndex = index;
-        const photo = lightboxPhotos[index];
-        lightboxImgEl.src = photo.src;
-        lightboxImgEl.alt = photo.caption || photo.name;
-        lightboxCaptionEl.textContent = photo.caption || photo.name;
-
-        const showNav = lightboxPhotos.length > 1;
-        lightboxPrevEl.hidden = !showNav;
-        lightboxNextEl.hidden = !showNav;
-
-        lightboxEl.hidden = false;
-        lightboxEl.setAttribute("aria-hidden", "false");
-        document.body.classList.add("photo-lightbox-open");
-        lightboxCloseEl.focus();
-    }
-
-    function closeLightbox() {
-        if (!lightboxEl || lightboxEl.hidden) {
-            return;
-        }
-
-        lightboxEl.hidden = true;
-        lightboxEl.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("photo-lightbox-open");
-        lightboxImgEl.removeAttribute("src");
-        lightboxIndex = -1;
-        lightboxPhotos = [];
-    }
-
-    function showLightboxStep(delta) {
-        if (!lightboxPhotos.length) {
-            return;
-        }
-        const nextIndex = (lightboxIndex + delta + lightboxPhotos.length) % lightboxPhotos.length;
-        openLightbox(nextIndex, lightboxPhotos);
-    }
-
     function openRandomPhoto() {
         if (!allPhotos.length) return;
         const index = Math.floor(Math.random() * allPhotos.length);
-        openLightbox(index, allPhotos);
-    }
-
-    function initLightbox() {
-        if (!lightboxEl) {
-            return;
-        }
-
-        lightboxCloseEl.addEventListener("click", closeLightbox);
-        lightboxPrevEl.addEventListener("click", function () {
-            showLightboxStep(-1);
-        });
-        lightboxNextEl.addEventListener("click", function () {
-            showLightboxStep(1);
-        });
-
-        lightboxEl.addEventListener("click", function (event) {
-            if (event.target === lightboxEl) {
-                closeLightbox();
-            }
-        });
-
-        document.addEventListener("keydown", function (event) {
-            if (lightboxEl.hidden) {
-                return;
-            }
-            if (event.key === "Escape") {
-                closeLightbox();
-            } else if (event.key === "ArrowLeft") {
-                showLightboxStep(-1);
-            } else if (event.key === "ArrowRight") {
-                showLightboxStep(1);
-            }
-        });
+        window.PhotoLightbox.open(index, allPhotos);
     }
 
     function renderGrid(album) {
@@ -196,14 +111,14 @@
             figure.appendChild(button);
 
             button.addEventListener("click", function () {
-                openLightbox(index);
+                window.PhotoLightbox.open(index, currentPhotos);
             });
 
             gridEl.appendChild(figure);
         });
     }
 
-    initLightbox();
+    window.PhotoLightbox.init();
 
     if (randomButtonEl) {
         randomButtonEl.addEventListener("click", openRandomPhoto);
