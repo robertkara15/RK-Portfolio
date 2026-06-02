@@ -1,12 +1,28 @@
 @import url(reset.css);
 
+:root {
+    --portfolio-bg-dark: #090a0f;
+    --portfolio-bg-mid: #1b2735;
+    --portfolio-theme-color: #1b2735;
+}
+
 html {
     color-scheme: dark;
-    background-color: #090a0f;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    background-attachment: fixed;
+    min-height: 100%;
+    min-height: 100dvh;
+    background-color: var(--portfolio-bg-dark);
     overflow-x: hidden;
     scrollbar-gutter: stable;
+}
+
+html::before {
+    content: "";
+    position: fixed;
+    z-index: -2;
+    inset: 0;
+    background-color: var(--portfolio-bg-dark);
+    background-image: radial-gradient(ellipse at bottom, var(--portfolio-bg-mid) 0%, var(--portfolio-bg-dark) 100%);
+    pointer-events: none;
 }
 
 body {
@@ -15,10 +31,16 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     overflow-x: hidden;
-    background-color: #090a0f;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    background-attachment: fixed;
+    background: transparent;
     font-family: Roboto Mono;
+}
+
+#site-header {
+    padding-top: env(safe-area-inset-top, 0px);
+}
+
+footer {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom, 0px));
 }
 
 /* Starfield: fixed layer so :after offsets do not extend page scroll */
