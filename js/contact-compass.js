@@ -10,7 +10,7 @@
     const segments = document.querySelectorAll('.contact_segment');
 
     const spinOrder = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-    const excludedSpinDirs = new Set(['SW', 'NW']);
+    const excludedSpinDirs = new Set(['SW']);
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function isReduceMotionEnabled() {
