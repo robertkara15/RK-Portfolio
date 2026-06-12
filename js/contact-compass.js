@@ -9,6 +9,18 @@
     const spinButton = document.getElementById('contact-spin-button');
     const segments = document.querySelectorAll('.contact_segment');
 
+    const linkedinPosts = [
+        'https://www.linkedin.com/posts/robert-karapetian-39900425a_last-friday-i-completed-my-summer-placement-activity-7360747151573819392-EGlL',
+        'https://www.linkedin.com/posts/robert-karapetian-39900425a_i-am-proud-to-share-that-i-have-officially-activity-7355554583370235905-l5MM',
+        'https://www.linkedin.com/posts/robert-karapetian-39900425a_i-am-honoured-to-have-received-the-demonstrator-activity-7343706475963334656-lBKQ',
+        'https://www.linkedin.com/posts/robert-karapetian-39900425a_this-week-i-had-the-incredible-opportunity-activity-7321660414218407938-p8QI',
+        'https://www.linkedin.com/posts/robert-karapetian-39900425a_eecs-qmul-github-activity-7318005885274918913-Him8',
+        'https://www.linkedin.com/posts/robert-karapetian-39900425a_for-the-past-2-weeks-i-have-been-participating-activity-7241459253444558848-FkFl',
+        'https://www.linkedin.com/posts/robert-karapetian-39900425a_yesterday-marked-the-end-of-my-8-weeks-working-activity-7230542190567960576-CTde',
+        'https://www.linkedin.com/posts/robert-karapetian-39900425a_i-am-thrilled-to-share-that-for-the-past-activity-7087856769711886336-pUaG',
+        'https://www.linkedin.com/posts/robert-karapetian-39900425a_i-am-delighted-to-announce-that-i-have-just-activity-7076305765531021312-1Llp',
+    ];
+
     const spinOrder = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
     const excludedSpinDirs = new Set(['SW']);
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -73,9 +85,26 @@
         });
     }
 
+    function pickRandomLinkedInPost() {
+        return linkedinPosts[Math.floor(Math.random() * linkedinPosts.length)];
+    }
+
+    function openRandomLinkedInPost() {
+        if (!linkedinPosts.length) return;
+        window.open(pickRandomLinkedInPost(), '_blank', 'noopener,noreferrer');
+    }
+
+    function isRandomLinkedInSegment(segment) {
+        return segment.dataset.randomLinkedin === 'true';
+    }
+
     function navigateToSegment(segment) {
+        if (isRandomLinkedInSegment(segment)) {
+            openRandomLinkedInPost();
+            return;
+        }
         const href = segment.getAttribute('href');
-        if (!href) return;
+        if (!href || href === '#') return;
         if (segment.getAttribute('target') === '_blank') {
             window.open(href, '_blank', 'noopener,noreferrer');
         } else {
@@ -96,7 +125,9 @@
         const title = segment.dataset.title || 'destination';
         showSegment(segment);
         readout.classList.add('is-redirecting');
-        readoutDetail.textContent = 'Redirecting to ' + title + '…';
+        readoutDetail.textContent = isRandomLinkedInSegment(segment)
+            ? 'Opening a LinkedIn post…'
+            : 'Redirecting to ' + title + '…';
 
         window.setTimeout(function () {
             navigateToSegment(segment);
@@ -153,6 +184,11 @@
         });
         segment.addEventListener('focus', function () {
             showSegment(segment);
+        });
+        segment.addEventListener('click', function (event) {
+            if (!isRandomLinkedInSegment(segment) || isSpinning) return;
+            event.preventDefault();
+            openRandomLinkedInPost();
         });
     });
 

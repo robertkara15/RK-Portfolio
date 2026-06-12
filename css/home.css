@@ -26,6 +26,8 @@ html::before {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin: 0;
     min-height: 100vh;
@@ -33,6 +35,10 @@ body {
     overflow-x: hidden;
     background: transparent;
     font-family: Roboto Mono;
+}
+
+.main {
+    flex: 1 0 auto;
 }
 
 #site-header {
@@ -785,10 +791,10 @@ header {
 
 .home_featured_strip {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     width: 100%;
-    margin: 0 auto 1.1rem;
+    margin: 0 auto 1.25rem;
 }
 
 .home_featured_card {
@@ -809,6 +815,21 @@ header {
 .home_featured_card:hover {
     border-color: #ffffff;
     background: rgba(55, 62, 73, 0.85);
+}
+
+.home_featured_card--accent {
+    background: color-mix(in srgb, var(--accent) 20%, rgba(255, 255, 255, 0.06));
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+.home_featured_card--accent:hover {
+    background: color-mix(in srgb, var(--accent) 28%, rgba(255, 255, 255, 0.08));
+    border-color: var(--accent);
+}
+
+.home_featured_card--accent .home_featured_label {
+    color: color-mix(in srgb, var(--accent) 70%, #ffffff);
 }
 
 .home_featured_label {
@@ -845,7 +866,7 @@ header {
 
 .home_skills_ticker {
     width: 100%;
-    margin: 0 auto 1.35rem;
+    margin: 1.25rem auto;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
     background: rgba(14, 20, 32, 0.72);
@@ -939,14 +960,14 @@ header {
 }
 
 .home_contact {
-    padding-top: 0.5rem;
+    padding-top: 0;
     width: 100%;
     max-width: 100%;
     overflow-x: clip;
 }
 
 .home_contact .contact_compass_layout {
-    margin-top: 0.5rem;
+    margin-top: 0;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -2322,6 +2343,7 @@ body.photo-lightbox-open {
 }
 
 .contact_readout {
+    position: relative;
     flex: 0 1 320px;
     width: 100%;
     max-width: 320px;
@@ -2337,6 +2359,10 @@ body.photo-lightbox-open {
 }
 
 .contact_readout_inner[hidden] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex !important;
     visibility: hidden;
     opacity: 0;
@@ -2620,15 +2646,94 @@ body.photo-lightbox-open {
 
 /* footer section */
 footer {
+    flex-shrink: 0;
     font-family: 'Open Sans', sans-serif;
     color: rgba(255, 255, 255, 0.75);
-    grid-area: footer;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
     font-size: 0.8125rem;
     text-align: center;
+}
+
+/* Stack readout above compass through tablet widths (matches narrow mobile layout) */
+@media screen and (max-width: 960px) {
+    .home_contact {
+        padding-top: 0;
+    }
+
+    .home_contact .contact_compass_layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.55rem;
+        margin-top: 0;
+        padding: 0;
+        overflow-x: clip;
+    }
+
+    .contact_readout {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0.45rem 0.7rem;
+        align-self: stretch;
+    }
+
+    .contact_compass {
+        flex: 0 0 auto;
+        width: min(calc(100% - 2px), 272px);
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .contact_spin_button {
+        width: 100%;
+        max-width: 100%;
+        font-size: 13px;
+        padding: 0.48rem 0.85rem;
+    }
+
+    .contact_readout_inner {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.65rem;
+    }
+
+    .contact_readout_inner > i {
+        width: 1.85rem;
+        height: 1.85rem;
+        font-size: 0.95rem;
+        flex-shrink: 0;
+        align-self: center;
+    }
+
+    .contact_readout_copy {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.12rem;
+        min-width: 0;
+    }
+
+    .contact_readout_title {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .contact_readout_detail {
+        font-size: 0.78rem;
+        line-height: 1.3;
+        min-height: 0;
+    }
+
+    .contact_segment_icon {
+        font-size: 0.8rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 800px), screen and (max-height: 740px) and (max-width: 960px) {
@@ -2767,76 +2872,6 @@ footer {
         width: 40%;
     }
 
-    .home_contact .contact_compass_layout {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.55rem;
-        padding: 0;
-        overflow-x: clip;
-    }
-
-    .contact_readout {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0.58rem 0.8rem;
-    }
-
-    .contact_readout_inner {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.75rem;
-    }
-
-    .contact_readout_inner > i {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1.1rem;
-        flex-shrink: 0;
-    }
-
-    .contact_readout_copy {
-        flex: 1;
-        gap: 0.2rem;
-        min-width: 0;
-    }
-
-    .contact_readout_title {
-        font-size: 1.05rem;
-        line-height: 1.25;
-    }
-
-    .contact_readout_detail {
-        font-size: 0.82rem;
-        line-height: 1.35;
-        min-height: calc(0.82rem * 1.35 * 2);
-    }
-
-    .contact_segment_icon {
-        font-size: 0.8rem;
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-
-    .contact_compass {
-        flex: 0 0 auto;
-        width: min(calc(100% - 2px), 272px);
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .home_contact {
-        padding-top: 0.85rem;
-    }
-
-    .contact_spin_button {
-        width: 100%;
-        max-width: 100%;
-        font-size: 13px;
-        padding: 0.48rem 0.85rem;
-    }
-
     .home_hero {
         margin-bottom: 1.35rem;
         margin-top: 0.15rem;
@@ -2867,7 +2902,7 @@ footer {
     .home_featured_strip {
         grid-template-columns: 1fr;
         gap: 0.45rem;
-        margin-bottom: 0.65rem;
+        margin-bottom: 1rem;
     }
 
     .home_featured_card {
@@ -2891,12 +2926,12 @@ footer {
     }
 
     .home_skills_ticker {
-        margin-bottom: 1.35rem;
+        margin: 1rem auto;
     }
 
     .home_skills_ticker_row {
         font-size: 0.74rem;
-        padding: 0.42rem 0;
+        padding: 0.38rem 0;
     }
 
     .home_skills_sep {
