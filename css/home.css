@@ -43,6 +43,16 @@ body {
 
 #site-header {
     padding-top: env(safe-area-inset-top, 0px);
+    padding-left: max(1.25rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1.25rem, env(safe-area-inset-right, 0px));
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+
+#site-header hgroup {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 footer {
@@ -590,8 +600,30 @@ footer {
         transform: scale(1);
     }
     45% {
-        filter: brightness(1.2) drop-shadow(0 0 10px rgba(255, 255, 255, 0.55));
+        filter: brightness(1.22) drop-shadow(0 0 12px rgba(248, 231, 28, 0.65))
+            drop-shadow(0 0 22px rgba(248, 231, 28, 0.35));
         transform: scale(1.05);
+    }
+}
+
+@keyframes triforceGlintBurst {
+    0%,
+    16% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.45);
+    }
+    28% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.2);
+    }
+    42% {
+        opacity: 0.85;
+        transform: translateX(-50%) scale(1);
+    }
+    58%,
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.55);
     }
 }
 
@@ -601,19 +633,29 @@ body.logo-twinkle .wrapper::before {
     inset: 0;
     z-index: 3;
     pointer-events: none;
-    background: radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.2) 0%, transparent 55%);
+    background: radial-gradient(
+        circle at 50% 12%,
+        rgba(248, 231, 28, 0.28) 0%,
+        rgba(248, 200, 40, 0.1) 35%,
+        transparent 58%
+    );
     animation: starTwinkleFlash 1.1s ease-out forwards;
 }
 
 body.logo-twinkle #stars,
 body.logo-twinkle #stars2,
 body.logo-twinkle #stars3 {
-    filter: brightness(1.45);
+    filter: brightness(1.45) sepia(0.12) saturate(1.15);
     transition: filter 0.35s ease-out;
 }
 
 body.logo-twinkle .heading_logo_link img {
     animation: logoTwinklePulse 1.1s ease-out;
+}
+
+body.logo-twinkle .heading_logo_glints::before {
+    opacity: 1;
+    animation: triforceGlintBurst 1.1s ease-out forwards;
 }
 
 nav {
@@ -636,11 +678,13 @@ header {
     align-items: center;
     list-style: none;
     width: 100%;
-    max-width: 960px;
-    margin: 0 auto 1px;
-    padding: 0.5rem 1.5rem 0;
-    height: 4.5rem;
+    margin: 0 auto;
+    padding: 0.2rem 0;
+    min-height: 0;
+    height: auto;
     box-sizing: border-box;
+    background: transparent;
+    border: none;
 }
 
 .heading_side {
@@ -652,19 +696,19 @@ header {
 .heading_side--left {
     grid-column: 1;
     justify-content: flex-end;
-    padding-right: 1.25rem;
+    padding-right: 1rem;
 }
 
 .heading_side--right {
     grid-column: 3;
     justify-content: flex-start;
-    padding-left: 1.25rem;
+    padding-left: 1rem;
 }
 
 .heading_side_links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 0.7rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -686,6 +730,7 @@ header {
 }
 
 .heading_logo_link {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -694,10 +739,44 @@ header {
     border: none;
 }
 
+.heading_logo_glints {
+    position: absolute;
+    inset: -4px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heading_logo_glints::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    opacity: 0;
+    background: #e3242b;
+    box-shadow:
+        -15px 33px 0 0 #3370ff,
+        15px 33px 0 0 #3d8c31;
+    filter: drop-shadow(0 0 5px rgba(248, 231, 28, 0.45));
+}
+
 .heading_logo_link img {
-    margin-top: 0;
+    position: relative;
+    z-index: 2;
     display: block;
+    width: 58px;
+    height: 58px;
+    margin: 0;
     border-radius: 0;
+    transition: filter 0.25s ease;
+}
+
+.heading_logo_link:hover img,
+.heading_logo_link:focus-visible img {
+    filter: brightness(1.08) drop-shadow(0 0 8px rgba(248, 231, 28, 0.5))
+        drop-shadow(0 0 18px rgba(248, 231, 28, 0.22));
 }
 
 .heading_logo_link.nav-current {
@@ -717,39 +796,69 @@ header {
 
 .heading_bar li {
     width: auto;
-    min-width: 90px;
+    min-width: 0;
     text-align: center;
 }
 
-.heading_bar a, .heading_bar img {
-    color: #ffffff;
+.heading_bar a {
     text-decoration: none;
-    font-size: 20px;
-    height: auto;
-}
-
-.heading_bar img {
-    margin-top: 15px;
-}
-
-.heading_bar a:hover {
-    color: #99ccff;
 }
 
 .heading_bar a:not(.heading_logo_link) {
     display: inline-block;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 2px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.42rem 0.85rem;
     box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    background: rgba(14, 20, 32, 0.72);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.22);
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.heading_bar a:not(.heading_logo_link):hover {
+    color: #ffffff;
+}
+
+/* Triforce easter egg — Din / Nayru / Farore / crest */
+.heading_bar a[href="education.html"]:hover {
+    border-color: rgba(227, 36, 43, 0.5);
+    background: rgba(227, 36, 43, 0.24);
+    box-shadow: 0 0 16px rgba(227, 36, 43, 0.18);
+}
+
+.heading_bar a[href="experience.html"]:hover {
+    border-color: rgba(51, 112, 255, 0.5);
+    background: rgba(51, 112, 255, 0.24);
+    box-shadow: 0 0 16px rgba(51, 112, 255, 0.18);
+}
+
+.heading_bar a[href="projects.html"]:hover {
+    border-color: rgba(61, 140, 49, 0.52);
+    background: rgba(61, 140, 49, 0.24);
+    box-shadow: 0 0 16px rgba(61, 140, 49, 0.18);
+}
+
+.heading_bar a[href="photography.html"]:hover {
+    border-color: rgba(248, 231, 28, 0.48);
+    background: rgba(248, 231, 28, 0.2);
+    box-shadow: 0 0 16px rgba(248, 231, 28, 0.16);
 }
 
 .heading_bar a.nav-current:not(.heading_logo_link) {
     color: #99ccff;
-    border-bottom-color: #99ccff;
-}
-
-.heading_bar a:not(:has(img)) {
-    font-size: 18px;
+    border-color: rgba(153, 204, 255, 0.52);
+    background: rgba(153, 204, 255, 0.1);
+    box-shadow: 0 0 14px rgba(153, 204, 255, 0.14);
 }
 
 /* home page */
@@ -2768,43 +2877,30 @@ footer {
         display: none;
     }
 
+    #site-header {
+        padding-left: max(0.65rem, env(safe-area-inset-left, 0px));
+        padding-right: max(0.65rem, env(safe-area-inset-right, 0px));
+        padding-bottom: 0.4rem;
+    }
+
     .heading_bar {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        height: auto;
+        min-height: 0;
         max-width: 100%;
         margin-bottom: 0;
-        padding: 0.35rem 0.65rem 0.45rem;
-        gap: 0.3rem 0.45rem;
+        padding: 0.15rem 0 0.25rem;
+        gap: 0.35rem 0.45rem;
     }
 
-    .heading_side,
-    .heading_side--left,
-    .heading_side--right {
-        grid-column: auto;
-        width: auto;
-        min-width: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .heading_side--left {
-        grid-column: 1;
-        justify-content: flex-end;
-        padding-right: 0.2rem;
-    }
-
-    .heading_side--right {
-        grid-column: 2;
-        justify-content: flex-start;
-        padding-left: 0.2rem;
+    .heading_side {
+        display: contents;
     }
 
     .heading_side_links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.3rem 0.55rem;
+        display: contents;
     }
 
     .heading_segment {
@@ -2818,22 +2914,23 @@ footer {
         width: auto;
     }
 
-    .heading_bar a:not(:has(img)) {
-        font-size: 13px;
+    .heading_bar a:not(.heading_logo_link) {
+        font-size: 11.5px;
+        padding: 0.32rem 0.55rem;
+        border-radius: 8px;
         letter-spacing: 0.01em;
     }
 
-    .heading_bar img,
     .heading_logo_link img {
-        width: 52px;
-        height: 52px;
-        margin-top: 0;
+        width: 48px;
+        height: 48px;
     }
 
     .heading_mobile_logo,
     #RK-2 {
-        grid-column: 1 / -1;
-        justify-self: center;
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
         list-style: none;
         margin: 0;
     }
@@ -2845,11 +2942,6 @@ footer {
     .image_area {
         width: 100%;
         margin-left: 0;
-    }
-
-    .heading_mobile_logo,
-    #RK-2 {
-        display: list-item;
     }
 
     .heading_center_logo,

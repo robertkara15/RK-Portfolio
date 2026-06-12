@@ -208,8 +208,14 @@ html.a11y-reduce-motion .timeline_trigger {
 }
 
 html.a11y-reduce-motion body.logo-twinkle .wrapper::before,
-html.a11y-reduce-motion body.logo-twinkle .heading_logo_link img {
+html.a11y-reduce-motion body.logo-twinkle .heading_logo_link img,
+html.a11y-reduce-motion body.logo-twinkle .heading_logo_glints::before {
     animation: none !important;
+}
+
+html.a11y-reduce-motion .heading_logo_link:hover img,
+html.a11y-reduce-motion .heading_logo_link:focus-visible img {
+    filter: brightness(1.06);
 }
 
 html.a11y-reduce-motion .home_skills_ticker_viewport {
